@@ -21,5 +21,5 @@ while count<5:
     else:
         print("Congratulations!! You Won\n")
         break
-
-print("Your chances are over. You Lose!!!")
+else:
+    print("Your chances are over. You Lose!!!")
