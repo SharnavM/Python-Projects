@@ -16,8 +16,8 @@ class TransferFile(object):
                 with open(local_path, 'rb') as f:
                     dbx.files_upload(f.read(), dbx_path, mode=WriteMode('overwrite'))
 
-accessToken = "<access-token>"
-transferFile = TransferFile(access_token)
+accessToken = "Bq5RUsJQVy8AAAAAAAAAAX7oli6_D8GmUVnGzyFv-u19AM4u2Q7CDkpGwJvmmvSK"
+transferFile = TransferFile(accessToken)
 
 src = input("Enter the folder path to transfer : -")
 dest = input("Enter the full path to upload to dropbox:- ")
