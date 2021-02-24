@@ -18,16 +18,11 @@ def upload(access_token,f,dt):
     f = open(f, "rb")
     dbx.files_upload(f.read(), f"/Security/{dt}/{name}")
 
-count = 0
-
-
 while True:
     now = datetime.now()
     f = snap()
     dt = now.date()
     ti = now.strftime("%H-%M-%S")
-    cv2.imwrite(f"frame_{ti}.jpg",f)
-    print(f"frame_{ti}.jpg")
-    upload("1WY4KQtQnM4AAAAAAAAAAWJ0qRraCzP5CXWJoqzLcudTnxnIALMPGcqsJriEmoX-",f"frame_{ti}.jpg", dt)
-    count += 1
+    cv2.imwrite(f"frame_{dt}-{ti}.jpg",f)
+    upload("1WY4KQtQnM4AAAAAAAAAAWJ0qRraCzP5CXWJoqzLcudTnxnIALMPGcqsJriEmoX-",f"frame_{dt}-{ti}.jpg", dt)
     time.sleep(10)
